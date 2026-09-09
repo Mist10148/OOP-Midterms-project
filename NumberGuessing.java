@@ -68,7 +68,7 @@ public class NumberGuessing {
         }
 
         else{
-            System.out.println("Round: " + i + "LOSE - ");
+            System.out.println("Round: " + i + "LOSE");
             totalLosses++;
         }
 
