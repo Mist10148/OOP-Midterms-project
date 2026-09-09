@@ -63,12 +63,12 @@ public class NumberGuessing {
 
         //round results displaying the win or lose statuses and the number of attempts used
         if(guess == number){
-            System.out.println("Round: " + i + "WIN - " + attempts + " attempts");
+            System.out.println("Round: " + i + " WIN - " + attempts + " attempts");
             totalWins++;
         }
 
         else{
-            System.out.println("Round: " + i + "LOSE");
+            System.out.println("Round: " + i + " LOSE");
             totalLosses++;
         }
 
