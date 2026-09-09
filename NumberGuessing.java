@@ -6,39 +6,50 @@ public class NumberGuessing {
         Scanner input = new Scanner(System.in);
         Random rd = new Random();
 
-        //variable declarations
-        int number = rd.nextInt(100) + 1;
-        int guess = 0;
-        int attempts = 0;
+
 
         //welcome message and instructions for the user
         System.out.println("Welcome to the Number Guessing Game!");
         System.out.println("I have selected a number between 1 and 100. Try to guess it!");
+        System.out.println("You will have five rounds and attempts for this tournament. Good luck!");
 
-        do{
-            //welcome message and ask the user for input
-            System.out.print("Enter your guess: ");
-            guess = input.nextInt();
-            attempts++;
+        for(int i = 1; i <= 5; i++){
+            System.out.println("Round " + i + ": ");
+            //variable declarations and resetting the guess and attempts for each round
+            int number = rd.nextInt(100) + 1;
+            int guess = 0;
+            int attempts = 0;
+
+            do{
+                System.out.print("Enter your guess: ");
+                guess = input.nextInt();
+                attempts++; 
+                
+                //conditionals
+                if(guess < number){
+                    System.out.println("Too low! try again.");
+                }
+
+                else if(guess > number){
+                    System.out.println("Too high! try again.");
+
+                }
+
+                else if(guess < 1 || guess > 100){
+                    System.out.println("Invalid input! Please enter a number between 1-100.");
+
+                }
+
+                else{
+                    System.out.println("Congratulations! You guessed the number " + number + " in " + attempts + " attempts.");
+                }
+
+        }while(guess != number && attempts < 5);
 
 
-            //conditional checking for the player's guess
-            if(guess < number) {
-                System.out.println("Your guess is too low! Try again.");
-            }
-
-            else if(guess > number){
-                System.out.println("Your guess is too high! Try again.");
-            }
-
-            else{
-                System.out.println("Congratulations! You've guessed the number " + number + " in " + attempts + " attempts.");
-
-            }
-
-        }while(guess != number);
 
         input.close();
 
     }
+}
 }
