@@ -18,7 +18,7 @@ public class NumberGuessing {
         System.out.println("You will have five rounds and attempts for this tournament. Good luck!");
 
         for(int i = 1; i <= 5; i++){
-            System.out.println("Round " + i);
+            System.out.println("\nRound " + i);
             //variable declarations and resetting the guess and attempts for each round
             int number = rd.nextInt(100) + 1;
             int guess = 0;
