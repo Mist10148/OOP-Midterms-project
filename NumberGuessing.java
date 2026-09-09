@@ -84,9 +84,6 @@ public class NumberGuessing {
     System.out.println("Average attempts per round: " + (double)(totalWins + totalLosses) / 5); //Average attempts
     System.out.println("Final Score: " + (totalWins * 20)); //final score up to 100
 
-
-    
-
     input.close();
 }
 }
