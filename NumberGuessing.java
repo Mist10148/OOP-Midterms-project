@@ -25,7 +25,7 @@ public class NumberGuessing {
                 guess = input.nextInt();
                 attempts++; 
                 
-                //conditionals
+                //conditionals for the number guessing
                 if(guess < number){
                     System.out.println("Too low! try again.");
                 }
@@ -43,13 +43,27 @@ public class NumberGuessing {
                 else{
                     System.out.println("Congratulations! You guessed the number " + number + " in " + attempts + " attempts.");
                 }
+                if(attempts >= 5 && guess != number){
+                    System.out.println("You have used all your attempts. The number was " + number);
+                }
+
+                //conditionals to check the number of attempts left
+                if(attempts < 5 && guess != number){
+                    System.out.println("You have " + (5 - attempts) + " attempts left.");
+                }
+                else if(attempts == 5 && guess != number){
+                    System.out.println("You have no attempts left.");
+                    break;
+                }
 
         }while(guess != number && attempts < 5);
 
 
 
-        input.close();
+
 
     }
+
+    input.close();
 }
 }
