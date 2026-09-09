@@ -11,11 +11,12 @@ public class NumberGuessing {
         int guess = 0;
         int attempts = 0;
 
+        //welcome message and instructions for the user
+        System.out.println("Welcome to the Number Guessing Game!");
+        System.out.println("I have selected a number between 1 and 100. Try to guess it!");
 
         do{
             //welcome message and ask the user for input
-            System.out.println("Welcome to the Number Guessing Game!");
-            System.out.println("I have selected a number between 1 and 100. Try to guess it!");
             System.out.print("Enter your guess: ");
             guess = input.nextInt();
             attempts++;
