@@ -12,10 +12,12 @@ public class CashInventory {
       //ATM Bills Declarations
       int thousand = 10;
       int fiveHundred = 10;
+      int twoHundred = 10;
       int oneHundred = 10;
       int fifty = 20;
       int twenty = 20;
 
+      
       //Console Prints
       System.out.println("Input the amount you want to withdraw:");
       amount = console.nextInt();
